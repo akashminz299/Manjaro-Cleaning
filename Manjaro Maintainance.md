@@ -1,4 +1,4 @@
-#### Clean pkg cache
+#### 1. Clean pkg cache
 
 ##### List cache directory & Check size
 ```
@@ -11,7 +11,7 @@
 ##### Remove all cache packages
 ```sudo pacman -Scc```
 
-#### Clean cache packages automatically using (paccache)
+#### 2. Clean cache packages automatically using (paccache)
 
 ##### Download
 ```sudo pacman -S pacman-contrib```
@@ -19,7 +19,7 @@
 ##### Run
 ```paccache -r```
 
-#### Remove unused packages (orphan)
+#### 3. Remove unused packages (orphan)
 
 ##### List orphan packages
 ```sudo pacman -Qtdq```
@@ -27,7 +27,7 @@
 ##### Remove orphan packages
 ```sudo pacman -R $(pacman -Qtdq)```
 
-#### Clean cache from home directory
+#### 4. Clean cache from home directory
 
 ##### List cache directory & Check size
 ```
@@ -38,7 +38,7 @@
 ##### Remove 
 ```rm -rf ~/.cache/* ```
 
-#### Deleting not required configuration files
+#### 5. Deleting not required configuration files
 
 ##### Goto
 ```/home/.config/```
