@@ -22,10 +22,10 @@
 ### 3. Remove unused packages (orphan)
 
 #### List orphan packages
-```sudo pacman -Qtdq```
+```sudo pacman -Qdt```
 
 #### Remove orphan packages
-```sudo pacman -R $(pacman -Qtdq)```
+```sudo pacman -Rs $(pacman -Qdtq)```
 
 ### 4. Clean cache from home directory
 
