@@ -1,46 +1,46 @@
-### 1. Clean pkg cache
+### Clean pkg cache
 
-####    a) List cache directory & Check size
+#### 1. List cache directory & Check size
 ```
   ls /var/cache/pacman/pkg/ | less 
   du -sh /var/cache/pacman/pkg/
 ```
-####    b) Remove not installed cache packages
+#### 2. Remove not installed cache packages
 ```sudo pacman -Sc```
 
-####    c) Remove all cache packages
+#### 3. Remove all cache packages
 ```sudo pacman -Scc```
 
-### 2. Clean cache packages automatically using (paccache)
+### Clean cache packages automatically using (paccache)
 
-####    a) Download
+#### 1. Download
 ```sudo pacman -S pacman-contrib```
 
-####    b) Run
+#### 2. Run
 ```paccache -r```
 
-### 3.Remove unused packages (orphan)
+### Remove unused packages (orphan)
 
-####    a) List orphan packages
+#### 1. List orphan packages
 ```sudo pacman -Qtdq```
 
-####    b) Remove orphan packages
+#### 2. Remove orphan packages
 ```sudo pacman -R $(pacman -Qtdq)```
 
-### 4. Clean cache from home directory
+### Clean cache from home directory
 
-####    a) List cache directory & Check size
+#### 1. List cache directory & Check size
 ```
   ls ~/.cache/ | less 
   du -sh ~/.cache/
 ```
 
-####    b) Remove 
+#### 2. Remove 
 ```rm -rf ~/.cache/* ```
 
-### 5. Deleting not required configuration files
+### Deleting not required configuration files
 
-####    a) Goto
+#### 1. Goto
 ```/home/.config/```
 And
 ```/home/.local/share/```
